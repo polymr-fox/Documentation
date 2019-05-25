@@ -1,8 +1,8 @@
 
-#Запросы
+# Запросы
 
 
-Авторизация:
+## Авторизация:
 
     • порт – 9991
     
@@ -17,7 +17,7 @@
     • /forgot_pass - {login:””, password:””, additionalInfo:”mail”}
     
 
-Статьи:
+## Статьи:
 
     • порт – 9992
     
@@ -38,7 +38,7 @@
     • /update – {id:_, articleName:””, text:””, tags:[“”, “”, “”]}
     
 
-Курсы:
+## Курсы:
 
     • порт – 9993
     
@@ -63,10 +63,10 @@
     • /delete – {id:_}
     
 
-#Ответы
+# Ответы
 
 
-Авторизация:
+## Авторизация:
 
     • порт – 9991
     
@@ -81,7 +81,7 @@
     • /forgot_pass - {login:””, password:””, additionalInfo:”mail”}
     
 
-Статьи:
+## Статьи:
 
     • порт – 9992
     
@@ -134,7 +134,7 @@
         ◦ okn’t – 400 bad request {status: 400, error:”Bad request”, message:”Bad request with: {пришедший запросом жсон}, path:”/update/rating”}
         
 
-Курсы:
+## Курсы:
 
     • порт – 9993
     
