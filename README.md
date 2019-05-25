@@ -6,15 +6,15 @@
 
     • порт – 9991
     
-    • /auth - { login:””, password:””}
+    • /auth - { username:””, password:””}
     
-    • /reg – {login:””, password:””, fullName:””, role:””, mail:””}
+    • /reg – {username:””, password:””, fullName:””, role:””, mail:””}
     
-    • /update_jwt – {login:””, password:””, additionalInfo:”old jwt”}
+    • /update_jwt – {username:””, password:””, additionalInfo:”old jwt”}
     
-    • /update_pass - {login:””, password:””, additionalInfo:”new pass”}
+    • /update_pass - {username:””, password:””, additionalInfo:”new pass”}
     
-    • /forgot_pass - {login:””, password:””, additionalInfo:”mail”}
+    • /forgot_pass - {username:””, password:””, additionalInfo:”mail”}
     
 
 ## Статьи:
