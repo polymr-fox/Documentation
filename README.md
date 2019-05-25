@@ -56,6 +56,8 @@
     
     • /unsubscribe - {id:_, userId:_}
     
+    • /change - {id:_, userId:_, isOpen:_}
+    
     • /update - 
     
         ◦ {id:_, name:””, description:””,  adminIds:[_, _, _], userIds:[_, _, _], tags:[“”, “”, “”], isOpen:true}
