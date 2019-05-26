@@ -10,7 +10,7 @@
     
     • /reg – {username:””, password:””, fullName:””, role:””, mail:””}
     
-    • /update_jwt – {username:””, password:””, additionalInfo:”old jwt”}
+    • /update_jwt – передайте старый жвт в хэдэре типом Bearer authorization
     
     • /update_pass - {username:””, password:””, additionalInfo:”new pass”}
     
@@ -72,15 +72,27 @@
 
     • порт – 9991
     
-    • /auth - { login:””, password:””}
+    • /auth - 
+        
+        ◦ ok - 200 OK {userId:__, userName:"", fullName:"", mail:"", links:[{},{}], role:"", canTags:[{},{}], loveTags:[{},{}], token:""}
+        ◦ okn't - 
+            ◦ недопустимые символы - 400 bad request {status: 400, error:”Illegal character”, message:"Illegal characters inlogin/password", path:”/auth”}
+            ◦ не прошел авторизацию - 401 Unauthorized {status: 401, error:"Unauthorized", message: "Wrong login or password", path:"/auth"}
     
-    • /reg – {login:””, password:””, fullName:””, role:””, mail:””}
+    • /reg – 
+        
+        ◦ ok - 200 OK {userId:__, userName:"", fullName:"", mail:"", links:[{},{}], role:"", canTags:[{},{}], loveTags:[{},{}], token:""}
+        ◦ okn't - 409 conflict {status = 409, error = "Conflict", message = "User with such username or mail already exist. Choose another one.", path = "/reg"}
     
-    • /update_jwt – {login:””, password:””, additionalInfo:”old jwt”}
+    • /update_jwt – 
+        ◦ ok - 200 OK {token:""}
+        ◦ okn't - 
+            ◦ неверный jwt - 401 Unauthorized {status = 401, error = "Unauthorized", message = "Wrong Jwt, auth again by /auth", path = "/update_jwt" }
+            ◦ в хэдэре нет токена - 401 Unauthorized {status = 401, error = "Unauthorized", message = "No token in header provided", path = "/update_jwt"}
     
-    • /update_pass - {login:””, password:””, additionalInfo:”new pass”}
+    • /update_pass - //doesn't work
     
-    • /forgot_pass - {login:””, password:””, additionalInfo:”mail”}
+    • /forgot_pass - //doesn't work
     
 
 ## Статьи:
