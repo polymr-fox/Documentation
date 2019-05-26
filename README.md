@@ -78,9 +78,10 @@
         ◦ okn't - 
             ◦ недопустимые символы - 400 bad request {status: 400, error:”Illegal character”, message:"Illegal characters inlogin/password", path:”/auth”}
             ◦ не прошел авторизацию - 401 Unauthorized {status: 401, error:"Unauthorized", message: "Wrong login or password", path:"/auth"}
+            ◦ ошибки sql - 500 iternal server error
+            
     
     • /reg – 
-        
         ◦ ok - 200 OK {userId:__, userName:"", fullName:"", mail:"", links:[{},{}], role:"", canTags:[{},{}], loveTags:[{},{}], token:""}
         ◦ okn't - 409 conflict {status = 409, error = "Conflict", message = "User with such username or mail already exist. Choose another one.", path = "/reg"}
     
